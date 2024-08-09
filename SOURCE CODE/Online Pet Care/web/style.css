@@ -1,0 +1,71 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Mar 31, 2019, 12:44:59 PM
+    Author     : Acer
+*/
+body{
+   
+    margin:0px;
+    background:silver;
+}
+#main{
+    width:100%;
+    height:80px;
+    border:1px solid white;
+    
+}
+.m2{
+    background:#DAA520;
+    margin-top:10px;
+    width:150px;
+    height:60px;
+    border:1px solid #DAA520;
+    float:right;
+    
+}
+#m1{
+    background:#DAA520;
+     margin-top:10px;
+  width:400px;
+    height:60px;
+    border:1px solid #DAA520;  
+    float:left;
+    color:#F8F8FF;
+    
+}
+p{
+
+text-align: center;
+ color:#F8F8FF;
+ font-size:20px;
+}
+.m2:hover{
+    background: gold;
+}
+.active .m2{
+ background: gold;   
+}
+#right{
+    width:34%;
+    height:500px;
+    border:1px solid white;
+    float:right;
+}
+#left{
+    width:65%;
+    height:500px;
+    border:1px solid white;
+    float:right;
+}
+.b{
+    margin:10px;
+    width:21%;
+    height:200px;
+    border:2px solid whitesmoke;
+    float:left;
+  
+}

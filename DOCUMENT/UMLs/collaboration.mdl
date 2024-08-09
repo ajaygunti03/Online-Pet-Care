@@ -1,0 +1,884 @@
+
+(object Petal
+    version    	42
+    _written   	"Rose 4.5.8054a"
+    charSet    	0)
+
+(object Design "Logical View"
+    is_unit    	TRUE
+    is_loaded  	TRUE
+    quid       	"5CB773CF00C7"
+    defaults   	(object defaults
+	rightMargin 	0.250000
+	leftMargin 	0.250000
+	topMargin  	0.250000
+	bottomMargin 	0.500000
+	pageOverlap 	0.250000
+	clipIconLabels 	TRUE
+	autoResize 	TRUE
+	snapToGrid 	TRUE
+	gridX      	16
+	gridY      	16
+	defaultFont 	(object Font
+	    size       	10
+	    face       	"Arial"
+	    bold       	FALSE
+	    italics    	FALSE
+	    underline  	FALSE
+	    strike     	FALSE
+	    color      	0
+	    default_color 	TRUE)
+	showMessageNum 	1
+	showClassOfObject 	TRUE
+	notation   	"Unified")
+    root_usecase_package 	(object Class_Category "Use Case View"
+	quid       	"5CB773CF00C9"
+	exportControl 	"Public"
+	global     	TRUE
+	logical_models 	(list unit_reference_list)
+	logical_presentations 	(list unit_reference_list
+	    (object UseCaseDiagram "Main"
+		quid       	"5CB773CF0135"
+		title      	"Main"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list))))
+    root_category 	(object Class_Category "Logical View"
+	quid       	"5CB773CF00C8"
+	exportControl 	"Public"
+	global     	TRUE
+	subsystem  	"Component View"
+	quidu      	"5CB773CF00CA"
+	logical_models 	(list unit_reference_list
+	    (object Mechanism @1
+		logical_models 	(list unit_reference_list
+		    (object Object "user"
+			quid       	"5CB773D9026B"
+			collaborators 	(list link_list
+			    (object Link
+				quid       	"5CB7740E01DE"
+				supplier   	"database"
+				quidu      	"5CB773E00381"
+				messages   	(list Messages
+				    (object Message "register"
+					quid       	"5CB7740E01DF"
+					frequency  	"Aperiodic"
+					synchronization 	"Simple"
+					dir        	"FromClientToSupplier"
+					sequence   	""
+					ordinal    	3)
+				    (object Message "login"
+					quid       	"5CB7741702D8"
+					frequency  	"Aperiodic"
+					synchronization 	"Simple"
+					dir        	"FromClientToSupplier"
+					sequence   	""
+					ordinal    	4)
+				    (object Message "viewUploads"
+					quid       	"5CB7742001BF"
+					frequency  	"Aperiodic"
+					synchronization 	"Simple"
+					dir        	"FromClientToSupplier"
+					sequence   	""
+					ordinal    	5)
+				    (object Message "askSuggestions"
+					quid       	"5CB7742C03AC"
+					frequency  	"Aperiodic"
+					synchronization 	"Simple"
+					dir        	"FromClientToSupplier"
+					sequence   	""
+					ordinal    	6)
+				    (object Message "viewSuggestions"
+					quid       	"5CB774390118"
+					frequency  	"Aperiodic"
+					synchronization 	"Simple"
+					dir        	"FromClientToSupplier"
+					sequence   	""
+					ordinal    	7)))
+			    (object Link
+				quid       	"5CB77441030C"
+				supplier   	"user"
+				quidu      	"5CB773D9026B"
+				messages   	(list Messages
+				    (object Message "logout"
+					quid       	"5CB77441030D"
+					frequency  	"Aperiodic"
+					synchronization 	"Simple"
+					dir        	"FromClientToSupplier"
+					sequence   	""
+					ordinal    	9))))
+			persistence 	"Transient"
+			multi      	FALSE)
+		    (object Object "admin"
+			quid       	"5CB773DD0036"
+			collaborators 	(list link_list
+			    (object Link
+				quid       	"5CB773F00312"
+				supplier   	"database"
+				quidu      	"5CB773E00381"
+				messages   	(list Messages
+				    (object Message "login"
+					quid       	"5CB773F00313"
+					frequency  	"Aperiodic"
+					synchronization 	"Simple"
+					dir        	"FromClientToSupplier"
+					sequence   	""
+					ordinal    	0)
+				    (object Message "addCategory"
+					quid       	"5CB773F80097"
+					frequency  	"Aperiodic"
+					synchronization 	"Simple"
+					dir        	"FromClientToSupplier"
+					sequence   	""
+					ordinal    	1)
+				    (object Message "addImageAndDetails"
+					quid       	"5CB773FF0317"
+					frequency  	"Aperiodic"
+					synchronization 	"Simple"
+					dir        	"FromClientToSupplier"
+					sequence   	""
+					ordinal    	2)))
+			    (object Link
+				quid       	"5CB774480278"
+				supplier   	"admin"
+				quidu      	"5CB773DD0036"
+				messages   	(list Messages
+				    (object Message "logout"
+					quid       	"5CB774480279"
+					frequency  	"Aperiodic"
+					synchronization 	"Simple"
+					dir        	"FromClientToSupplier"
+					sequence   	""
+					ordinal    	8))))
+			persistence 	"Transient"
+			multi      	FALSE)
+		    (object Object "database"
+			quid       	"5CB773E00381"
+			persistence 	"Transient"
+			multi      	FALSE))))
+	logical_presentations 	(list unit_reference_list
+	    (object ClassDiagram "Main"
+		quid       	"5CB773CF00D7"
+		title      	"Main"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list))
+	    (object InteractionDiagram "sequence"
+		mechanism_ref 	@1
+		quid       	"5CB773D40063"
+		title      	"sequence"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list
+		    (object InterObjView "user" @2
+			location   	(448, 224)
+			font       	(object Font
+			    underline  	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@2
+			    location   	(448, 224)
+			    fill_color 	12058623
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	282
+			    justify    	0
+			    label      	"user")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	12058623
+			quidu      	"5CB773D9026B"
+			width      	300
+			height     	1761
+			icon_height 	0
+			icon_width 	0
+			annotation 	1
+			Focus_Of_Control 	(object Focus_Of_Control "" @3
+			    location   	(448, 880)
+			    line_color 	3342489
+			    InterObjView 	@2
+			    height     	120
+			    y_coord    	60
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @4
+			    location   	(448, 1024)
+			    line_color 	3342489
+			    InterObjView 	@2
+			    height     	120
+			    y_coord    	60
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @5
+			    location   	(448, 1184)
+			    line_color 	3342489
+			    InterObjView 	@2
+			    height     	120
+			    y_coord    	60
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @6
+			    location   	(448, 1328)
+			    line_color 	3342489
+			    InterObjView 	@2
+			    height     	120
+			    y_coord    	60
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @7
+			    location   	(448, 1472)
+			    line_color 	3342489
+			    InterObjView 	@2
+			    height     	120
+			    y_coord    	60
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @8
+			    location   	(448, 1744)
+			    line_color 	3342489
+			    InterObjView 	@2
+			    height     	152
+			    y_coord    	92
+			    Nested     	FALSE))
+		    (object InterObjView "admin" @9
+			location   	(1200, 224)
+			font       	(object Font
+			    underline  	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@9
+			    location   	(1200, 224)
+			    fill_color 	12058623
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	282
+			    justify    	0
+			    label      	"admin")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	12058623
+			quidu      	"5CB773DD0036"
+			width      	300
+			height     	1761
+			icon_height 	0
+			icon_width 	0
+			annotation 	1
+			Focus_Of_Control 	(object Focus_Of_Control "" @10
+			    location   	(1200, 416)
+			    line_color 	3342489
+			    InterObjView 	@9
+			    height     	120
+			    y_coord    	60
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @11
+			    location   	(1200, 592)
+			    line_color 	3342489
+			    InterObjView 	@9
+			    height     	120
+			    y_coord    	60
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @12
+			    location   	(1200, 752)
+			    line_color 	3342489
+			    InterObjView 	@9
+			    height     	120
+			    y_coord    	60
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @13
+			    location   	(1200, 1616)
+			    line_color 	3342489
+			    InterObjView 	@9
+			    height     	152
+			    y_coord    	92
+			    Nested     	FALSE))
+		    (object InterObjView "database" @14
+			location   	(1920, 224)
+			font       	(object Font
+			    underline  	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@14
+			    location   	(1920, 224)
+			    fill_color 	12058623
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	282
+			    justify    	0
+			    label      	"database")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	12058623
+			quidu      	"5CB773E00381"
+			width      	300
+			height     	1761
+			icon_height 	0
+			icon_width 	0
+			annotation 	1
+			Focus_Of_Control 	(object Focus_Of_Control "" @15
+			    location   	(1920, 416)
+			    line_color 	3342489
+			    InterObjView 	@14
+			    height     	60
+			    y_coord    	0
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @16
+			    location   	(1920, 592)
+			    line_color 	3342489
+			    InterObjView 	@14
+			    height     	60
+			    y_coord    	0
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @17
+			    location   	(1920, 752)
+			    line_color 	3342489
+			    InterObjView 	@14
+			    height     	60
+			    y_coord    	0
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @18
+			    location   	(1920, 880)
+			    line_color 	3342489
+			    InterObjView 	@14
+			    height     	60
+			    y_coord    	0
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @19
+			    location   	(1920, 1024)
+			    line_color 	3342489
+			    InterObjView 	@14
+			    height     	60
+			    y_coord    	0
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @20
+			    location   	(1920, 1184)
+			    line_color 	3342489
+			    InterObjView 	@14
+			    height     	60
+			    y_coord    	0
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @21
+			    location   	(1920, 1328)
+			    line_color 	3342489
+			    InterObjView 	@14
+			    height     	60
+			    y_coord    	0
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @22
+			    location   	(1920, 1472)
+			    line_color 	3342489
+			    InterObjView 	@14
+			    height     	60
+			    y_coord    	0
+			    Nested     	FALSE))
+		    (object InterMessView "" @23
+			location   	(0, 416)
+			label      	(object SegLabel @24
+			    Parent_View 	@23
+			    location   	(1560, 372)
+			    quidu      	"5CB773F00313"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	81
+			    justify    	0
+			    label      	"login"
+			    pctDist    	0.500000
+			    height     	45
+			    orientation 	0)
+			line_color 	3342489
+			client     	@9
+			supplier   	@14
+			Focus_Src  	@10
+			Focus_Entry 	@15
+			origin     	(1216, 416)
+			terminus   	(1904, 416)
+			ordinal    	0)
+		    (object InterMessView "" @25
+			location   	(0, 592)
+			label      	(object SegLabel @26
+			    Parent_View 	@25
+			    location   	(1560, 548)
+			    quidu      	"5CB773F80097"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	219
+			    justify    	0
+			    label      	"addCategory"
+			    pctDist    	0.500000
+			    height     	45
+			    orientation 	0)
+			line_color 	3342489
+			client     	@9
+			supplier   	@14
+			Focus_Src  	@11
+			Focus_Entry 	@16
+			origin     	(1216, 592)
+			terminus   	(1904, 592)
+			ordinal    	1)
+		    (object InterMessView "" @27
+			location   	(0, 752)
+			label      	(object SegLabel @28
+			    Parent_View 	@27
+			    location   	(1560, 708)
+			    quidu      	"5CB773FF0317"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	359
+			    justify    	0
+			    label      	"addImageAndDetails"
+			    pctDist    	0.500000
+			    height     	45
+			    orientation 	0)
+			line_color 	3342489
+			client     	@9
+			supplier   	@14
+			Focus_Src  	@12
+			Focus_Entry 	@17
+			origin     	(1216, 752)
+			terminus   	(1904, 752)
+			ordinal    	2)
+		    (object InterMessView "" @29
+			location   	(0, 880)
+			label      	(object SegLabel @30
+			    Parent_View 	@29
+			    location   	(749, 838)
+			    quidu      	"5CB7740E01DF"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	128
+			    justify    	0
+			    label      	"register"
+			    pctDist    	0.198611
+			    height     	43
+			    orientation 	0)
+			line_color 	3342489
+			client     	@2
+			supplier   	@14
+			Focus_Src  	@3
+			Focus_Entry 	@18
+			origin     	(464, 880)
+			terminus   	(1904, 880)
+			ordinal    	3)
+		    (object InterMessView "" @31
+			location   	(0, 1024)
+			label      	(object SegLabel @32
+			    Parent_View 	@31
+			    location   	(736, 982)
+			    quidu      	"5CB7741702D8"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	81
+			    justify    	0
+			    label      	"login"
+			    pctDist    	0.188889
+			    height     	43
+			    orientation 	0)
+			line_color 	3342489
+			client     	@2
+			supplier   	@14
+			Focus_Src  	@4
+			Focus_Entry 	@19
+			origin     	(464, 1024)
+			terminus   	(1904, 1024)
+			ordinal    	4)
+		    (object InterMessView "" @33
+			location   	(0, 1184)
+			label      	(object SegLabel @34
+			    Parent_View 	@33
+			    location   	(800, 1142)
+			    quidu      	"5CB7742001BF"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	216
+			    justify    	0
+			    label      	"viewUploads"
+			    pctDist    	0.233333
+			    height     	43
+			    orientation 	0)
+			line_color 	3342489
+			client     	@2
+			supplier   	@14
+			Focus_Src  	@5
+			Focus_Entry 	@20
+			origin     	(464, 1184)
+			terminus   	(1904, 1184)
+			ordinal    	5)
+		    (object InterMessView "" @35
+			location   	(0, 1328)
+			label      	(object SegLabel @36
+			    Parent_View 	@35
+			    location   	(783, 1270)
+			    quidu      	"5CB7742C03AC"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	281
+			    justify    	0
+			    label      	"askSuggestions"
+			    pctDist    	0.221528
+			    height     	59
+			    orientation 	0)
+			line_color 	3342489
+			client     	@2
+			supplier   	@14
+			Focus_Src  	@6
+			Focus_Entry 	@21
+			origin     	(464, 1328)
+			terminus   	(1904, 1328)
+			ordinal    	6)
+		    (object InterMessView "" @37
+			location   	(0, 1472)
+			label      	(object SegLabel @38
+			    Parent_View 	@37
+			    location   	(768, 1413)
+			    quidu      	"5CB774390118"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	291
+			    justify    	0
+			    label      	"viewSuggestions"
+			    pctDist    	0.211806
+			    height     	60
+			    orientation 	0)
+			line_color 	3342489
+			client     	@2
+			supplier   	@14
+			Focus_Src  	@7
+			Focus_Entry 	@22
+			origin     	(464, 1472)
+			terminus   	(1904, 1472)
+			ordinal    	7)
+		    (object SelfMessView "" @39
+			location   	(0, 1776)
+			label      	(object SegLabel @40
+			    Parent_View 	@39
+			    location   	(539, 1732)
+			    quidu      	"5CB77441030D"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	106
+			    justify    	0
+			    label      	"logout"
+			    pctDist    	0.500000
+			    height     	45
+			    orientation 	0)
+			line_color 	3342489
+			client     	@2
+			supplier   	@2
+			Focus_Src  	@8
+			origin     	(464, 1776)
+			terminus   	(614, 1776)
+			ordinal    	9)
+		    (object SelfMessView "" @41
+			location   	(0, 1648)
+			label      	(object SegLabel @42
+			    Parent_View 	@41
+			    location   	(1291, 1604)
+			    quidu      	"5CB774480279"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	106
+			    justify    	0
+			    label      	"logout"
+			    pctDist    	0.500000
+			    height     	45
+			    orientation 	0)
+			line_color 	3342489
+			client     	@9
+			supplier   	@9
+			Focus_Src  	@13
+			origin     	(1216, 1648)
+			terminus   	(1366, 1648)
+			ordinal    	8)))
+	    (object ObjectDiagram "sequence"
+		mechanism_ref 	@1
+		quid       	"5CB7745901A2"
+		title      	"sequence"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list
+		    (object ObjectView "user" @43
+			location   	(176, 384)
+			font       	(object Font
+			    underline  	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@43
+			    location   	(95, 333)
+			    fill_color 	12058623
+			    nlines     	2
+			    max_width  	162
+			    justify    	0
+			    label      	"user")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	12058623
+			quidu      	"5CB773D9026B"
+			height     	126
+			annotation 	4
+			autoResize 	TRUE
+			subobjects 	0
+			x_offset   	0.000000
+			y_offset   	0.000000)
+		    (object ObjectView "admin" @44
+			location   	(448, 384)
+			font       	(object Font
+			    underline  	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@44
+			    location   	(367, 333)
+			    fill_color 	12058623
+			    nlines     	2
+			    max_width  	162
+			    justify    	0
+			    label      	"admin")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	12058623
+			quidu      	"5CB773DD0036"
+			height     	126
+			annotation 	4
+			autoResize 	TRUE
+			subobjects 	0
+			x_offset   	0.000000
+			y_offset   	0.000000)
+		    (object ObjectView "database" @45
+			location   	(176, 928)
+			font       	(object Font
+			    underline  	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@45
+			    location   	(95, 877)
+			    fill_color 	12058623
+			    nlines     	2
+			    max_width  	162
+			    justify    	0
+			    label      	"database")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	12058623
+			quidu      	"5CB773E00381"
+			height     	126
+			annotation 	4
+			autoResize 	TRUE
+			subobjects 	0
+			x_offset   	0.000000
+			y_offset   	0.000000)
+		    (object LinkSelfView "" @46
+			location   	(176, 171)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"5CB77441030C"
+			client     	@43
+			supplier   	@43
+			line_style 	0)
+		    (object LinkSelfView "" @47
+			location   	(448, 171)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"5CB774480278"
+			client     	@44
+			supplier   	@44
+			line_style 	0)
+		    (object MessView "" @48
+			location   	(448, 127)
+			line_color 	3342489
+			label      	(object SegLabel @49
+			    Parent_View 	@48
+			    location   	(448, 83)
+			    quidu      	"5CB774480279"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	150
+			    justify    	0
+			    label      	"logout"
+			    pctDist    	0.500000
+			    height     	45
+			    orientation 	0)
+			object_arc 	@47
+			pctDist    	0.500000
+			height     	45
+			orientation 	0
+			dir        	1
+			origin     	(388, 127)
+			terminus   	(508, 127))
+		    (object MessView "" @50
+			location   	(176, 127)
+			line_color 	3342489
+			label      	(object SegLabel @51
+			    Parent_View 	@50
+			    location   	(176, 83)
+			    quidu      	"5CB77441030D"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	172
+			    justify    	0
+			    label      	"logout"
+			    pctDist    	0.500000
+			    height     	45
+			    orientation 	0)
+			object_arc 	@46
+			pctDist    	0.500000
+			height     	45
+			orientation 	0
+			dir        	1
+			origin     	(116, 127)
+			terminus   	(236, 127))
+		    (object LinkView "" @52
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"5CB7740E01DE"
+			client     	@43
+			supplier   	@45
+			line_style 	0)
+		    (object MessView "" @53
+			location   	(221, 656)
+			line_color 	3342489
+			label      	(object SegLabel @54
+			    Parent_View 	@53
+			    location   	(266, 468)
+			    quidu      	"5CB7740E01DF"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	175
+			    justify    	0
+			    label      	"register"
+			    pctDist    	0.500000
+			    height     	45
+			    orientation 	0)
+			label      	(object SegLabel @55
+			    Parent_View 	@53
+			    location   	(266, 515)
+			    quidu      	"5CB7741702D8"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	125
+			    justify    	0
+			    label      	"login"
+			    pctDist    	0.500000
+			    height     	45
+			    orientation 	0)
+			label      	(object SegLabel @56
+			    Parent_View 	@53
+			    location   	(266, 562)
+			    quidu      	"5CB7742001BF"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	259
+			    justify    	0
+			    label      	"viewUploads"
+			    pctDist    	0.500000
+			    height     	45
+			    orientation 	0)
+			label      	(object SegLabel @57
+			    Parent_View 	@53
+			    location   	(266, 609)
+			    quidu      	"5CB7742C03AC"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	325
+			    justify    	0
+			    label      	"askSuggestions"
+			    pctDist    	0.500000
+			    height     	45
+			    orientation 	0)
+			label      	(object SegLabel @58
+			    Parent_View 	@53
+			    location   	(266, 656)
+			    quidu      	"5CB774390118"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	334
+			    justify    	0
+			    label      	"viewSuggestions"
+			    pctDist    	0.500000
+			    height     	45
+			    orientation 	0)
+			object_arc 	@52
+			pctDist    	0.500000
+			height     	45
+			orientation 	0
+			dir        	1
+			origin     	(221, 596)
+			terminus   	(221, 716))
+		    (object LinkView "" @59
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"5CB773F00312"
+			client     	@44
+			supplier   	@45
+			line_style 	0)
+		    (object MessView "" @60
+			location   	(352, 675)
+			line_color 	3342489
+			label      	(object SegLabel @61
+			    Parent_View 	@60
+			    location   	(393, 695)
+			    quidu      	"5CB773F00313"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	125
+			    justify    	0
+			    label      	"login"
+			    pctDist    	0.500000
+			    height     	45
+			    orientation 	0)
+			label      	(object SegLabel @62
+			    Parent_View 	@60
+			    location   	(393, 742)
+			    quidu      	"5CB773F80097"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	266
+			    justify    	0
+			    label      	"addCategory"
+			    pctDist    	0.500000
+			    height     	45
+			    orientation 	0)
+			label      	(object SegLabel @63
+			    Parent_View 	@60
+			    location   	(393, 789)
+			    quidu      	"5CB773FF0317"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	406
+			    justify    	0
+			    label      	"addImageAndDetails"
+			    pctDist    	0.500000
+			    height     	45
+			    orientation 	0)
+			object_arc 	@59
+			pctDist    	0.500000
+			height     	45
+			orientation 	0
+			dir        	1
+			origin     	(378, 621)
+			terminus   	(326, 729))))))
+    root_subsystem 	(object SubSystem "Component View"
+	quid       	"5CB773CF00CA"
+	physical_models 	(list unit_reference_list)
+	physical_presentations 	(list unit_reference_list
+	    (object Module_Diagram "Main"
+		quid       	"5CB773CF0134"
+		title      	"Main"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list))))
+    process_structure 	(object Processes
+	quid       	"5CB773CF00CB"
+	ProcsNDevs 	(list
+	    (object Process_Diagram "Deployment View"
+		quid       	"5CB773CF00CD"
+		title      	"Deployment View"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list))))
+    properties 	(object Properties
+	quid       	"5CB773CF00CC"))

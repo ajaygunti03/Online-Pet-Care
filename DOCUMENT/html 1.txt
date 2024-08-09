@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>Online Pet Care</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         </head>
+    <body>
+        <div id="main">
+            <a href="Admin.jsp"><div class="m2"><p>ADMIN</p></div></a> 
+            <a href="Register.jsp"> <div class="m2"><p>REGISTER</p></div></a> 
+        <a href="Login.jsp" class="active"><div class="m2"><p>LOGIN</p></div></a> 
+        <a href="index.html"  ><div class="m2"><p>HOME</p></div></a> 
+        </div>
+            <p>LOGIN HERE</p>
+            <form action="LoginAction.jsp" method="post">
+                <table>
+                    <tr><td><input type="text" name="uname" required="" placeholder="ENTER USERNAME"
+                     <tr><td><input type="password" name="pwd" required="" placeholder="ENTER PASSWORD"
+                    <tr><td><input type="submit" value="Login Here" 
+                     <Tr></TR>    <Tr></TR>    <Tr></TR>    <Tr></TR>
+                     <tr><td>DON'T HAVE AN ACCOUNT ? </tD></tr>
+                     <tr><td>FORGOT PASSWORD ? </tr>
+                </table>
+            </form>
+        </div>
+       </body></html>

@@ -1,0 +1,261 @@
+
+(object Petal
+    version    	42
+    _written   	"Rose 4.5.8054a"
+    charSet    	0)
+
+(object Design "Logical View"
+    is_unit    	TRUE
+    is_loaded  	TRUE
+    quid       	"5CB7736D0092"
+    defaults   	(object defaults
+	rightMargin 	0.250000
+	leftMargin 	0.250000
+	topMargin  	0.250000
+	bottomMargin 	0.500000
+	pageOverlap 	0.250000
+	clipIconLabels 	TRUE
+	autoResize 	TRUE
+	snapToGrid 	TRUE
+	gridX      	16
+	gridY      	16
+	defaultFont 	(object Font
+	    size       	10
+	    face       	"Arial"
+	    bold       	FALSE
+	    italics    	FALSE
+	    underline  	FALSE
+	    strike     	FALSE
+	    color      	0
+	    default_color 	TRUE)
+	showMessageNum 	1
+	showClassOfObject 	TRUE
+	notation   	"Unified")
+    root_usecase_package 	(object Class_Category "Use Case View"
+	quid       	"5CB7736D0094"
+	exportControl 	"Public"
+	global     	TRUE
+	logical_models 	(list unit_reference_list)
+	logical_presentations 	(list unit_reference_list
+	    (object UseCaseDiagram "Main"
+		quid       	"5CB7736D00E1"
+		title      	"Main"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list))))
+    root_category 	(object Class_Category "Logical View"
+	quid       	"5CB7736D0093"
+	exportControl 	"Public"
+	global     	TRUE
+	subsystem  	"Component View"
+	quidu      	"5CB7736D0095"
+	logical_models 	(list unit_reference_list
+	    (object Class "admin"
+		quid       	"5CB7737000D5"
+		operations 	(list Operations
+		    (object Operation "login"
+			quid       	"5CB773790232"
+			concurrency 	"Sequential"
+			opExportControl 	"Public"
+			uid        	0)
+		    (object Operation "addCategory"
+			quid       	"5CB7737D02FD"
+			concurrency 	"Sequential"
+			opExportControl 	"Public"
+			uid        	0)
+		    (object Operation "addImageandDetails"
+			quid       	"5CB773850005"
+			concurrency 	"Sequential"
+			opExportControl 	"Public"
+			uid        	0)
+		    (object Operation "logout"
+			quid       	"5CB7738A0083"
+			concurrency 	"Sequential"
+			opExportControl 	"Public"
+			uid        	0))
+		class_attributes 	(list class_attribute_list
+		    (object ClassAttribute "username"
+			quid       	"5CB773740039")
+		    (object ClassAttribute "password"
+			quid       	"5CB77375023C")))
+	    (object Class "User"
+		quid       	"5CB77393016A"
+		operations 	(list Operations
+		    (object Operation "register"
+			quid       	"5CB773A500C9"
+			concurrency 	"Sequential"
+			opExportControl 	"Public"
+			uid        	0)
+		    (object Operation "login"
+			quid       	"5CB773A6028E"
+			concurrency 	"Sequential"
+			opExportControl 	"Public"
+			uid        	0)
+		    (object Operation "viewUploads"
+			quid       	"5CB773A70359"
+			concurrency 	"Sequential"
+			opExportControl 	"Public"
+			uid        	0)
+		    (object Operation "askSuggestion"
+			quid       	"5CB773AC01DF"
+			concurrency 	"Sequential"
+			opExportControl 	"Public"
+			uid        	0)
+		    (object Operation "viewSuggestions"
+			quid       	"5CB773B30067"
+			concurrency 	"Sequential"
+			opExportControl 	"Public"
+			uid        	0)
+		    (object Operation "logout"
+			quid       	"5CB773B800A2"
+			concurrency 	"Sequential"
+			opExportControl 	"Public"
+			uid        	0))
+		class_attributes 	(list class_attribute_list
+		    (object ClassAttribute "name"
+			quid       	"5CB7739800C3")
+		    (object ClassAttribute "email"
+			quid       	"5CB773980392")
+		    (object ClassAttribute "mobile"
+			quid       	"5CB7739B00A4")
+		    (object ClassAttribute "address"
+			quid       	"5CB7739C0315")
+		    (object ClassAttribute "username"
+			quid       	"5CB7739E0383")
+		    (object ClassAttribute "password"
+			quid       	"5CB773A0017F")))
+	    (object Association "$UNNAMED$0"
+		quid       	"5CB773BD0390"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$1"
+			quid       	"5CB773C10229"
+			supplier   	"Logical View::User"
+			quidu      	"5CB77393016A"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$2"
+			quid       	"5CB773C10238"
+			supplier   	"Logical View::admin"
+			quidu      	"5CB7737000D5"
+			is_navigable 	TRUE))))
+	logical_presentations 	(list unit_reference_list
+	    (object ClassDiagram "Main"
+		quid       	"5CB7736D00A2"
+		title      	"Main"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list
+		    (object ClassView "Class" "Logical View::admin" @1
+			ShowCompartmentStereotypes 	TRUE
+			IncludeAttribute 	TRUE
+			IncludeOperation 	TRUE
+			location   	(352, 464)
+			label      	(object ItemLabel
+			    Parent_View 	@1
+			    location   	(137, 258)
+			    fill_color 	12058623
+			    nlines     	1
+			    max_width  	430
+			    justify    	0
+			    label      	"admin")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	12058623
+			quidu      	"5CB7737000D5"
+			compartment 	(object Compartment
+			    Parent_View 	@1
+			    location   	(137, 318)
+			    icon_style 	"Icon"
+			    fill_color 	12058623
+			    anchor     	2
+			    nlines     	7
+			    max_width  	428)
+			width      	448
+			height     	436
+			annotation 	8
+			autoResize 	TRUE)
+		    (object ClassView "Class" "Logical View::User" @2
+			ShowCompartmentStereotypes 	TRUE
+			IncludeAttribute 	TRUE
+			IncludeOperation 	TRUE
+			location   	(1328, 464)
+			label      	(object ItemLabel
+			    Parent_View 	@2
+			    location   	(1145, 108)
+			    fill_color 	12058623
+			    nlines     	1
+			    max_width  	366
+			    justify    	0
+			    label      	"User")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	12058623
+			quidu      	"5CB77393016A"
+			compartment 	(object Compartment
+			    Parent_View 	@2
+			    location   	(1145, 168)
+			    icon_style 	"Icon"
+			    fill_color 	12058623
+			    anchor     	2
+			    nlines     	13
+			    max_width  	363)
+			width      	384
+			height     	736
+			annotation 	8
+			autoResize 	TRUE)
+		    (object AssociationViewNew "$UNNAMED$0" @3
+			location   	(855, 464)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"5CB773BD0390"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$1" @4
+				Parent_View 	@3
+				location   	(503, 0)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5CB773C10229"
+				client     	@3
+				supplier   	@2
+				line_style 	0)
+			    (object RoleView "$UNNAMED$2" @5
+				Parent_View 	@3
+				location   	(503, 0)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5CB773C10238"
+				client     	@3
+				supplier   	@1
+				line_style 	0)))))))
+    root_subsystem 	(object SubSystem "Component View"
+	quid       	"5CB7736D0095"
+	physical_models 	(list unit_reference_list)
+	physical_presentations 	(list unit_reference_list
+	    (object Module_Diagram "Main"
+		quid       	"5CB7736D00E0"
+		title      	"Main"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list))))
+    process_structure 	(object Processes
+	quid       	"5CB7736D0096"
+	ProcsNDevs 	(list
+	    (object Process_Diagram "Deployment View"
+		quid       	"5CB7736D0098"
+		title      	"Deployment View"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list))))
+    properties 	(object Properties
+	quid       	"5CB7736D0097"))
